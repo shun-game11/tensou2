@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5;url=https://jpn-shinkyou.f5.si">
+    <title>ページ移動のお知らせ</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>このページは移動しました。</h1>
+    <p><span id="countdown">5</span>秒後に新しいページへ移動します。</p>
+    <p>自動的に移動しない場合は、<a href="https://jpn-shinkyou.f5.si">こちらをクリックしてください</a>。</p>
+
+    <script>
+        let count = 5;
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            count--;
+            countdownElement.textContent = count;
+            if (count === 0) {
+                // カウントが0になったら自動的にリダイレクトされるので、JavaScriptで特に処理は不要
+                // 必要であれば、ここに何かメッセージを表示するなどの処理を追加できます
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
